@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gazapay/Core/Util/assets.dart';
 import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/View/Auth/forgot_pin_screen.dart';
 import 'package:gazapay/View/Auth/register_screen.dart';
 import 'package:gazapay/Widgets/custom_text_filed.dart';
 import 'package:gazapay/Widgets/logo_with_title.dart';
@@ -98,7 +99,9 @@ class LoginScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerRight,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, ForgotPinScreen.id);
+                      },
                       child: const Text(
                         "نسيت رمز PIN؟",
                         style: TextStyle(

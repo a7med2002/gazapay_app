@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gazapay/View/Auth/forgot_pin_screen.dart';
 import 'package:gazapay/View/Auth/login_screen.dart';
 import 'package:gazapay/View/Auth/register_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         RegisterScreen.id : (context) => const RegisterScreen(),
         LoginScreen.id : (context) => const LoginScreen(),
+        ForgotPinScreen.id : (context) => const ForgotPinScreen(),
       },
     );
   }
