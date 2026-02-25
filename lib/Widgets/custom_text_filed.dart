@@ -4,8 +4,17 @@ import 'package:gazapay/Core/Util/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hint;
+
+  /// Core
+  final TextEditingController? controller;
+  final FocusNode? focusNode;
   final bool obscureText;
   final TextInputType keyboardType;
+
+  /// Validation
+  final String? Function(String?)? validator;
+  final void Function(String)? onChanged;
+  final void Function(String)? onFieldSubmitted;
 
   /// Icons
   final String? prefixSvg;
@@ -16,8 +25,13 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
     required this.hint,
+    this.controller,
+    this.focusNode,
     this.obscureText = false,
     this.keyboardType = TextInputType.text,
+    this.validator,
+    this.onChanged,
+    this.onFieldSubmitted,
     this.prefixSvg,
     this.suffixSvg,
     this.prefixIcon,
@@ -27,9 +41,14 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
+      focusNode: focusNode,
       obscureText: obscureText,
       keyboardType: keyboardType,
-      textAlign: TextAlign.right,
+      textAlign: TextAlign.start,
+      validator: validator,
+      onChanged: onChanged,
+      onFieldSubmitted: onFieldSubmitted,
       decoration: InputDecoration(
         hintText: hint,
         hintStyle: const TextStyle(color: kGreyColor),
@@ -44,42 +63,33 @@ class CustomTextField extends StatelessWidget {
         border: _border(kHintColor),
         enabledBorder: _border(kHintColor),
         focusedBorder: _border(kPrimaryColor, width: 1.2),
+        errorBorder: _border(Colors.red),
+        focusedErrorBorder: _border(Colors.red, width: 1.2),
 
         /// Prefix
-        prefixIcon:
-            prefixIcon ??
+        prefixIcon: prefixIcon ??
             (prefixSvg != null
-                ? Padding(
-                    padding: const EdgeInsets.all(14),
-                    child: SvgPicture.asset(
-                      prefixSvg!,
-                      height: 20,
-                      width: 20,
-                      colorFilter: const ColorFilter.mode(
-                        kGreyColor,
-                        BlendMode.srcIn,
-                      ),
-                    ),
-                  )
+                ? _buildSvg(prefixSvg!)
                 : null),
 
         /// Suffix
-        suffixIcon:
-            suffixIcon ??
+        suffixIcon: suffixIcon ??
             (suffixSvg != null
-                ? Padding(
-                    padding: const EdgeInsets.all(14),
-                    child: SvgPicture.asset(
-                      suffixSvg!,
-                      height: 20,
-                      width: 20,
-                      colorFilter: const ColorFilter.mode(
-                        kGreyColor,
-                        BlendMode.srcIn,
-                      ),
-                    ),
-                  )
+                ? _buildSvg(suffixSvg!)
                 : null),
+      ),
+    );
+  }
+
+  Widget _buildSvg(String path) {
+    return Padding(
+      padding: const EdgeInsets.all(14),
+      child: SvgPicture.asset(
+        path,
+        height: 20,
+        width: 20,
+        colorFilter:
+            const ColorFilter.mode(kGreyColor, BlendMode.srcIn),
       ),
     );
   }

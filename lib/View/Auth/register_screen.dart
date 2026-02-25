@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:gazapay/Core/Util/assets.dart';
 import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/View/Auth/login_screen.dart';
 import 'package:gazapay/Widgets/custom_text_filed.dart';
 import 'package:gazapay/Widgets/logo_with_title.dart';
 import 'package:gazapay/Widgets/primary_button.dart';
 
 class RegisterScreen extends StatelessWidget {
+  static String id = "registerScreen";
   const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F5),
+      backgroundColor: kWhiteColor,
       body: SafeArea(
         child: Stack(
           children: [
@@ -125,13 +127,15 @@ class RegisterScreen extends StatelessWidget {
                         style: TextStyle(fontSize: 14, color: kGreyColor),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, LoginScreen.id);
+                        },
                         child: const Text(
                           "تسجيل دخول",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFF1E3A5F),
+                            color: kPrimaryColor,
                           ),
                         ),
                       ),

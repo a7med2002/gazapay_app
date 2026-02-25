@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gazapay/View/Auth/login_screen.dart';
 import 'package:gazapay/View/Auth/register_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -25,6 +26,10 @@ class MyApp extends StatelessWidget {
       ],
       theme: ThemeData(fontFamily: 'Tajawal'),
       home: RegisterScreen(),
+      routes: {
+        RegisterScreen.id : (context) => const RegisterScreen(),
+        LoginScreen.id : (context) => const LoginScreen(),
+      },
     );
   }
 }
