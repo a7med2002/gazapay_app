@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // ============= END POINTS ==============
 
-const baseUrl = '';
+const baseUrl = 'https://gazapay-api.onrender.com';
 
 
 // ============= STYLE CONSTS ==============
