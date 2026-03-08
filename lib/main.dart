@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gazapay/Provider/login_provider.dart';
 import 'package:gazapay/Provider/register_provider.dart';
 import 'package:gazapay/View/Auth/forgot_pin_screen.dart';
 import 'package:gazapay/View/Auth/login_screen.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => RegisterProvider()),
+        ChangeNotifierProvider(create: (_) => LoginProvider()),
       ],
       child: MaterialApp(
         title: 'Gaza Pay',
