@@ -1,0 +1,2492 @@
+===== D:\Android\gazapay\analysis_options.yaml =====
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
+===== D:\Android\gazapay\pubspec.yaml =====
+name: gazapay
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  flutter_localizations:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.2.3
+  smooth_page_indicator: ^2.0.1
+  http: ^1.6.0
+  provider: ^6.1.5+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^6.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/icons/
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/Tajawal-Regular.ttf
+        - asset: assets/fonts/Tajawal-Bold.ttf
+          weight: 700
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
+===== D:\Android\gazapay\.idea\modules.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gazapay.iml" filepath="$PROJECT_DIR$/gazapay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/gazapay_android.iml" filepath="$PROJECT_DIR$/android/gazapay_android.iml" />
+    </modules>
+  </component>
+</project>
+===== D:\Android\gazapay\.idea\workspace.xml =====
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <option name="show-excluded-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+</project>
+===== D:\Android\gazapay\.idea\libraries\Dart_SDK.xml =====
+<component name="libraryTable">
+  <library name="Dart SDK">
+    <CLASSES>
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/async" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/collection" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/convert" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/core" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/developer" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/html" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/io" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/isolate" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/math" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/mirrors" />
+      <root url="file://C:\dart/bin/cache/dart-sdk/lib/typed_data" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
+===== D:\Android\gazapay\.idea\libraries\KotlinJavaRuntime.xml =====
+<component name="libraryTable">
+  <library name="KotlinJavaRuntime">
+    <CLASSES>
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-reflect.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-test.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-reflect-sources.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-test-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
+===== D:\Android\gazapay\.idea\runConfigurations\main_dart.xml =====
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+    <method />
+  </configuration>
+</component>
+===== D:\Android\gazapay\android\app\src\debug\AndroidManifest.xml =====
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+===== D:\Android\gazapay\android\app\src\main\AndroidManifest.xml =====
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="gazapay"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>
+===== D:\Android\gazapay\android\app\src\main\res\drawable\launch_background.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+===== D:\Android\gazapay\android\app\src\main\res\drawable-v21\launch_background.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?android:colorBackground" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+===== D:\Android\gazapay\android\app\src\main\res\values\styles.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+===== D:\Android\gazapay\android\app\src\main\res\values-night\styles.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is on -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+===== D:\Android\gazapay\android\app\src\profile\AndroidManifest.xml =====
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+===== D:\Android\gazapay\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json =====
+{
+  "images" : [
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-40x40@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-40x40@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-20x20@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-20x20@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-29x29@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-29x29@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-40x40@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-40x40@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-76x76@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-76x76@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-83.5x83.5@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "Icon-App-1024x1024@1x.png",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+===== D:\Android\gazapay\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json =====
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "LaunchImage.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "LaunchImage@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "LaunchImage@3x.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+===== D:\Android\gazapay\lib\main.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Provider/forgot_pin_provider.dart';
+import 'package:gazapay/Provider/login_provider.dart';
+import 'package:gazapay/Provider/register_provider.dart';
+import 'package:gazapay/View/Auth/forgot_pin_screen.dart';
+import 'package:gazapay/View/Auth/login_screen.dart';
+import 'package:gazapay/View/Auth/register_screen.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:gazapay/View/Home/home_screen.dart';
+import 'package:provider/provider.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => RegisterProvider()),
+        ChangeNotifierProvider(create: (_) => LoginProvider()),
+        ChangeNotifierProvider(create: (_) => ForgotPinProvider()),
+      ],
+      child: MaterialApp(
+        title: 'Gaza Pay',
+        debugShowCheckedModeBanner: false,
+        locale: const Locale('ar'),
+
+        supportedLocales: const [Locale('ar'), Locale('en')],
+
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        theme: ThemeData(fontFamily: 'Tajawal'),
+        home: LoginScreen(),
+        routes: {
+          RegisterScreen.id: (context) => const RegisterScreen(),
+          LoginScreen.id: (context) => const LoginScreen(),
+          ForgotPinScreen.id: (context) => const ForgotPinScreen(),
+          HomeScreen.id: (context) => const HomeScreen(),
+        },
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\Core\Helper\api_base_helper.dart =====
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:gazapay/Core/Helper/app_exceptions.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+import 'package:http/http.dart' as http;
+
+class ApiBaseHelper {
+  Future<dynamic> get(String url, Map<String, String> header) async {
+    var responseJson;
+    try {
+      final response = await http.get(
+        Uri.parse(baseUrl + url),
+        headers: header,
+      );
+
+      responseJson = _returnResponse(response);
+    } on SocketException {
+      throw FetchDataException('No Internet connection');
+    }
+    return responseJson;
+  }
+
+  Future<dynamic> post(
+    String url,
+    Map<String, dynamic> body,
+    Map<String, String> header,
+  ) async {
+    var responseJson;
+    try {
+      final response = await http.post(
+        Uri.parse(baseUrl + url),
+        body: jsonEncode(body),
+        headers: header,
+      );
+
+      responseJson = _returnResponse(response);
+    } on SocketException {
+      throw FetchDataException('No Internet connection');
+    }
+    return responseJson;
+  }
+
+  Future<dynamic> update(
+    String url,
+    Map<String, String> body,
+    Map<String, String> header,
+  ) async {
+    var responseJson;
+    try {
+      final response = await http.put(
+        Uri.parse(baseUrl + url),
+        body: body,
+        headers: header,
+      );
+      responseJson = _returnResponse(response);
+      return responseJson;
+    } on SocketException {
+      throw FetchDataException('No Internet connection');
+    }
+  }
+
+  Future<dynamic> delete(String url, Map<String, String> header) async {
+    var responseJson;
+    try {
+      final response = await http.delete(
+        Uri.parse(baseUrl + url),
+        headers: header,
+      );
+      responseJson = _returnResponse(response);
+      return responseJson;
+    } on SocketException {
+      throw FetchDataException('No Internet connection');
+    }
+  }
+
+  dynamic _returnResponse(http.Response response) {
+    final responseBody = jsonDecode(response.body);
+
+    switch (response.statusCode) {
+      case 200:
+      case 201:
+        return responseBody;
+
+      case 400:
+        throw BadRequestException(responseBody['message'].toString());
+
+      case 401:
+      case 403:
+        throw UnauthorisedException(responseBody['message'].toString());
+
+      case 404:
+        throw FetchDataException("Resource not found");
+
+      case 409:
+        throw ConflictException(responseBody['message'].toString());
+
+      case 500:
+      default:
+        throw FetchDataException(
+          'Error occurred while communicating with server with StatusCode : ${response.statusCode}',
+        );
+    }
+  }
+}
+===== D:\Android\gazapay\lib\Core\Helper\api_response.dart =====
+class ApiResponse<T> {
+  Status status;
+  T? data;
+  String? message;
+
+  ApiResponse.loading(this.message) : status = Status.LOADING;
+  ApiResponse.completed(this.data) : status = Status.COMPLETED;
+  ApiResponse.error(this.message) : status = Status.ERROR;
+
+  @override
+  String toString() {
+    return "Status : $status";
+  }
+}
+
+enum Status { LOADING, COMPLETED, ERROR }
+===== D:\Android\gazapay\lib\Core\Helper\app_exceptions.dart =====
+class AppExceptions implements Exception {
+  final _message;
+  final _prefix;
+
+  AppExceptions([this._message, this._prefix]);
+
+  @override
+  String toString() {
+    return "$_prefix$_message";
+  }
+}
+
+class FetchDataException extends AppExceptions {
+  FetchDataException(message) : super(message, "Error During Communication: ");
+}
+
+class BadRequestException extends AppExceptions {
+  BadRequestException([message]) : super(message, "Invalid Request: ");
+}
+
+class UnauthorisedException extends AppExceptions {
+  UnauthorisedException([message]) : super(message, "Unauthorised: ");
+}
+
+class InvalidInputException extends AppExceptions {
+  InvalidInputException([message]) : super(message, "Invalid Input: ");
+}
+
+class ConflictException extends AppExceptions {
+  ConflictException([message]) : super(message, "Conflict: ");
+}
+===== D:\Android\gazapay\lib\Core\Util\assets.dart =====
+final String authScreenShape = 'assets/images/authScreenShape.png';
+final String appLogo = 'assets/icons/appIcon.svg';
+===== D:\Android\gazapay\lib\Core\Util\constants.dart =====
+import 'package:flutter/material.dart';
+
+// ============= END POINTS ==============
+
+const baseUrl = 'https://gazapay-api.onrender.com';
+
+
+// ============= STYLE CONSTS ==============
+
+const kGreyColor = Color(0xffB1A6A6);
+const kWhiteColor = Color(0xffFFFFFF);
+const kBlackColor = Color(0xff262424);
+
+const kPrimaryColor = Color(0xff1A4667);
+const kSecondaryColor = Color(0xff909090);
+
+const kHintColor = Color(0xffC4BABA);
+const kBackgroundColor = Color(0xffF7F6FF);
+
+// // Low Opacity Colors
+const kLightPrimaryColor = Color(0xff6589FF);
+===== D:\Android\gazapay\lib\Model\login_response.dart =====
+class LoginResponse {
+  String accessToken;
+
+  LoginResponse({required this.accessToken});
+
+  factory LoginResponse.fromJson(Map<String, dynamic> json) {
+    return LoginResponse(accessToken: json['data']['access_token']);
+  }
+}
+===== D:\Android\gazapay\lib\Model\user.dart =====
+class User {
+    String? id;
+    String? phone;
+    String? name;
+    DateTime? createdAt;
+    DateTime? updatedAt;
+
+    User({
+        this.id,
+        this.phone,
+        this.name,
+        this.createdAt,
+        this.updatedAt,
+    });
+
+    factory User.fromJson(Map<String, dynamic> json) => User(
+        id: json["id"],
+        phone: json["phone"],
+        name: json["name"],
+        createdAt: json["createdAt"] != null ? DateTime.parse(json["createdAt"]) : null,
+        updatedAt: json["updatedAt"] != null ? DateTime.parse(json["updatedAt"]) : null,
+    );
+
+    Map<String, dynamic> toJson() => {
+        "id": id,
+        "phone": phone,
+        "name": name,
+        "createdAt": createdAt?.toIso8601String(),
+        "updatedAt": updatedAt?.toIso8601String(),
+    };
+}
+===== D:\Android\gazapay\lib\Provider\forgot_pin_provider.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Helper/api_response.dart';
+import 'package:gazapay/Repo/user_repository.dart';
+
+class ForgotPinProvider extends ChangeNotifier {
+  final UserRepository _repository = UserRepository();
+
+  final TextEditingController phoneController = TextEditingController();
+
+  final TextEditingController codeController = TextEditingController();
+
+  final TextEditingController newPinController = TextEditingController();
+  final TextEditingController confirmPinController = TextEditingController();
+
+  ApiResponse<String>? resetPinResponse;
+
+  ApiResponse<String>? verifyCodeResponse;
+
+  ApiResponse<String>? changePinResponse;
+
+  String? resetToken;
+
+  Future<void> resetPin() async {
+    resetPinResponse = ApiResponse.loading("Resetting PIN...");
+    notifyListeners();
+
+    try {
+      final message = await _repository.resetPin({
+        "phone": phoneController.text,
+      });
+      resetPinResponse = ApiResponse.completed(message);
+    } catch (e) {
+      resetPinResponse = ApiResponse.error(e.toString());
+    }
+    notifyListeners();
+  }
+
+  Future<void> verifyCode() async {
+    verifyCodeResponse = ApiResponse.loading("loading...");
+    notifyListeners();
+    print(
+      "Verifying code for phone: ${phoneController.text} with code: ${codeController.text}",
+    );
+    try {
+      final token = await _repository.verifyCode({
+        "phone": phoneController.text,
+        "code": codeController.text,
+      });
+
+      resetToken = token;
+      verifyCodeResponse = ApiResponse.completed(token);
+    } catch (e) {
+      verifyCodeResponse = ApiResponse.error(e.toString());
+    }
+
+    notifyListeners();
+  }
+
+  Future<void> changePin() async {
+    if (resetToken == null) {
+      changePinResponse = ApiResponse.error(
+        "Invalid token. Please verify code first.",
+      );
+      notifyListeners();
+      return;
+    }
+
+    changePinResponse = ApiResponse.loading("Changing PIN...");
+    notifyListeners();
+
+    try {
+      final message = await _repository.changePin({
+        "phone": phoneController.text,
+        "newPassword": newPinController.text,
+      }, resetToken!);
+
+      changePinResponse = ApiResponse.completed(message);
+    } catch (e) {
+      changePinResponse = ApiResponse.error(e.toString());
+    }
+    notifyListeners();
+  }
+}
+===== D:\Android\gazapay\lib\Provider\login_provider.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Helper/api_response.dart';
+import 'package:gazapay/Model/login_response.dart';
+import 'package:gazapay/Repo/user_repository.dart';
+
+class LoginProvider extends ChangeNotifier {
+  final UserRepository _repository = UserRepository();
+
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController pinController = TextEditingController();
+
+  ApiResponse<LoginResponse>? _loginResponse;
+
+  ApiResponse<LoginResponse>? get loginResponse => _loginResponse;
+
+  Future<void> login() async {
+    _loginResponse = ApiResponse.loading("Loading...");
+    notifyListeners();
+    try {
+      final result = await _repository.login({
+        "phone": phoneController.text,
+        "password": pinController.text,
+      });
+      _loginResponse = ApiResponse.completed(result);
+      notifyListeners();
+    } catch (e) {
+      _loginResponse = ApiResponse.error(e.toString());
+      notifyListeners();
+    }
+  }
+}
+===== D:\Android\gazapay\lib\Provider\register_provider.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Helper/api_response.dart';
+import 'package:gazapay/Model/user.dart';
+import 'package:gazapay/Repo/user_repository.dart';
+
+class RegisterProvider extends ChangeNotifier {
+  final UserRepository _userRepository = UserRepository();
+  ApiResponse<User>? _registerResponse;
+
+  ApiResponse<User>? get registerResponse => _registerResponse;
+
+  final nameController = TextEditingController();
+  final phoneController = TextEditingController();
+  final pinController = TextEditingController();
+  final confirmPinController = TextEditingController();
+
+  bool isLoading = false;
+
+  Future<User?> register() async {
+    if (pinController.text != confirmPinController.text) {
+      _registerResponse = ApiResponse.error("رمز PIN غير متطابق");
+      notifyListeners();
+      return null;
+    }
+
+    isLoading = true;
+    notifyListeners();
+
+    try {
+      final resultUser = await _userRepository.register({
+        "name": nameController.text,
+        "phone": phoneController.text,
+        "password": pinController.text,
+      });
+      _registerResponse = ApiResponse.completed(resultUser);
+      return resultUser;
+    } catch (e) {
+      _registerResponse = ApiResponse.error(e.toString());
+      return null;
+    } finally {
+      isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  void clearFields() {
+    nameController.clear();
+    phoneController.clear();
+    pinController.clear();
+    confirmPinController.clear();
+  }
+}
+===== D:\Android\gazapay\lib\Repo\user_repository.dart =====
+import 'package:gazapay/Core/Helper/api_base_helper.dart';
+import 'package:gazapay/Model/login_response.dart';
+import 'package:gazapay/Model/user.dart';
+
+class UserRepository {
+  final ApiBaseHelper _helper = ApiBaseHelper();
+
+  Future<User> register(Map<String, dynamic> data) async {
+    final response = await _helper.post("/auth/register", data, {
+      "Content-Type": "application/json",
+    });
+    return User.fromJson(response);
+  }
+
+  Future<LoginResponse> login(Map<String, dynamic> data) async {
+    final response = await _helper.post("/auth/login", data, {
+      "Content-Type": "application/json",
+    });
+    return LoginResponse.fromJson(response);
+  }
+
+  Future<String> resetPin(Map<String, dynamic> data) async {
+    final response = await _helper.post("/auth/reset-password", data, {
+      "Content-Type": "application/json",
+    });
+    return response["message"];
+  }
+
+  Future<String> verifyCode(Map<String, dynamic> data) async {
+    final response = await _helper.post("/auth/verify-code", data, {
+      "Content-Type": "application/json",
+    });
+    return response['token'];
+  }
+
+  Future<String> changePin(Map<String, dynamic> data, String token) async {
+    final response = await _helper.post("/auth/change-password", data, {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer $token",
+    });
+    return response["message"];
+  }
+}
+===== D:\Android\gazapay\lib\View\Auth\forgot_pin_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/View/Auth/Forgot%20Pin%20Steps/step_create_pin.dart';
+import 'package:gazapay/View/Auth/Forgot%20Pin%20Steps/step_enter_phone.dart';
+import 'package:gazapay/View/Auth/Forgot%20Pin%20Steps/step_verify_code.dart';
+import 'package:gazapay/Widgets/forgot_pin_header.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+class ForgotPinScreen extends StatefulWidget {
+  static String id = "forgotPinScreen";
+  const ForgotPinScreen({super.key});
+
+  @override
+  State<ForgotPinScreen> createState() => _ForgotPinScreenState();
+}
+
+class _ForgotPinScreenState extends State<ForgotPinScreen> {
+  final PageController _controller = PageController();
+
+  void next() {
+    _controller.nextPage(
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: kWhiteColor,
+      body: SafeArea(
+        child: Column(
+          children: [
+            const SizedBox(height: 40),
+            const ForgotPinHeader(),
+            Expanded(
+              child: PageView(
+                controller: _controller,
+                physics: const NeverScrollableScrollPhysics(),
+                children: [
+                  StepEnterPhone(onNext: next),
+                  StepVerifyCode(onNext: next),
+                  StepCreatePin(onNext: next),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(bottom: 24),
+              child: SmoothPageIndicator(
+                controller: _controller,
+                count: 3,
+                effect: ExpandingDotsEffect(
+                  dotHeight: 10,
+                  dotWidth: 8,
+                  activeDotColor: kPrimaryColor,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\View\Auth\login_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gazapay/Core/Helper/api_response.dart';
+import 'package:gazapay/Core/Util/assets.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/Provider/login_provider.dart';
+import 'package:gazapay/View/Auth/forgot_pin_screen.dart';
+import 'package:gazapay/View/Auth/register_screen.dart';
+import 'package:gazapay/View/Home/home_screen.dart';
+import 'package:gazapay/Widgets/custom_text_filed.dart';
+import 'package:gazapay/Widgets/logo_with_title.dart';
+import 'package:gazapay/Widgets/primary_button.dart';
+import 'package:provider/provider.dart';
+
+class LoginScreen extends StatelessWidget {
+  static String id = "loginScreen";
+
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final loginProv = Provider.of<LoginProvider>(context);
+    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+    return Scaffold(
+      backgroundColor: kWhiteColor,
+      body: SafeArea(
+        child: Stack(
+          children: [
+            /// Top Background Shape
+            Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: Image.asset(authScreenShape, fit: BoxFit.cover),
+            ),
+
+            /// Content
+            SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: 60),
+
+                    /// Logo
+                    const LogoWithTitle(),
+                    const SizedBox(height: 100),
+
+                    /// Welcome Text
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "مرحباً بعودتك ..",
+                        style: TextStyle(fontSize: 14, color: kPrimaryColor),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+
+                    /// Title
+                    const Text(
+                      "تسجيل الدخول",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w600,
+                        color: kPrimaryColor,
+                      ),
+                    ),
+                    const SizedBox(height: 40),
+
+                    /// Phone
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "رقم الهاتف",
+                        style: TextStyle(fontSize: 14, color: kBlackColor),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    CustomTextField(
+                      hint: "+970",
+                      prefixSvg: "assets/icons/phone.svg",
+                      keyboardType: TextInputType.phone,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "يرجى إدخال رقم الهاتف";
+                        }
+                        return null;
+                      },
+                      controller: loginProv.phoneController,
+                    ),
+                    const SizedBox(height: 20),
+
+                    /// PIN
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "رمز PIN",
+                        style: TextStyle(fontSize: 14, color: kBlackColor),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    CustomTextField(
+                      hint: "ادخل 4-6 أرقام",
+                      prefixSvg: "assets/icons/lock.svg",
+                      suffixSvg: "assets/icons/eye.svg",
+                      obscureText: true,
+                      keyboardType: TextInputType.number,
+                      controller: loginProv.pinController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "يرجى إدخال رمز PIN";
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 8),
+
+                    /// Forgot PIN
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, ForgotPinScreen.id);
+                        },
+                        child: const Text(
+                          "نسيت رمز PIN؟",
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: kPrimaryColor,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+
+                    /// Login Button
+                    Consumer<LoginProvider>(
+                      builder: (_, loginProv, _) {
+                        if (loginProv.loginResponse?.status == Status.LOADING) {
+                          return Center(child: CircularProgressIndicator());
+                        }
+                        if (loginProv.loginResponse?.status == Status.ERROR) {
+                          print("Error: ${loginProv.loginResponse?.message}");
+                          WidgetsBinding.instance.addPostFrameCallback((_) {
+                            if (loginProv.loginResponse?.message != null &&
+                                loginProv.loginResponse!.message!.isNotEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    loginProv.loginResponse!.message!,
+                                    style: TextStyle(color: kWhiteColor),
+                                  ),
+                                  backgroundColor: kPrimaryColor,
+                                ),
+                              );
+                            }
+                          });
+                        }
+                        if (loginProv.loginResponse?.status ==
+                            Status.COMPLETED) {
+                          WidgetsBinding.instance.addPostFrameCallback((_) {
+                            Navigator.pushReplacementNamed(
+                              context,
+                              HomeScreen.id,
+                            );
+                          });
+                        }
+                        return PrimaryButton(
+                          onPressed: () {
+                            if (_formKey.currentState!.validate()) {
+                              loginProv.login();
+                            }
+                          },
+                          title: "تسجيل الدخول",
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 30),
+
+                    /// Divider with OR
+                    Row(
+                      children: const [
+                        Expanded(child: Divider(color: kHintColor)),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 12),
+                          child: Text(
+                            "أو",
+                            style: TextStyle(color: kGreyColor),
+                          ),
+                        ),
+                        Expanded(child: Divider(color: kHintColor)),
+                      ],
+                    ),
+                    const SizedBox(height: 25),
+
+                    /// Biometric Login Text
+                    const Text(
+                      "تسجيل الدخول بالبصمة",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: kPrimaryColor,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+
+                    /// Fingerprint Button
+                    Container(
+                      height: 70,
+                      width: 70,
+                      decoration: BoxDecoration(
+                        color: kPrimaryColor,
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          "assets/icons/fingerprint.svg",
+                          height: 40,
+                          width: 30,
+                          colorFilter: const ColorFilter.mode(
+                            Colors.white,
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+
+                    /// Register Text
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "ليس لديك حساب؟ ",
+                          style: TextStyle(fontSize: 14, color: kGreyColor),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacementNamed(
+                              context,
+                              RegisterScreen.id,
+                            );
+                          },
+                          child: const Text(
+                            "إنشاء حساب جديد",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: kPrimaryColor,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 30),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\View\Auth\register_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Helper/api_response.dart';
+import 'package:gazapay/Core/Util/assets.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/Provider/register_provider.dart';
+import 'package:gazapay/View/Auth/login_screen.dart';
+import 'package:gazapay/View/Home/home_screen.dart';
+import 'package:gazapay/Widgets/custom_text_filed.dart';
+import 'package:gazapay/Widgets/logo_with_title.dart';
+import 'package:gazapay/Widgets/primary_button.dart';
+import 'package:provider/provider.dart';
+
+class RegisterScreen extends StatelessWidget {
+  static String id = "registerScreen";
+  const RegisterScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+    final provider = Provider.of<RegisterProvider>(context);
+    return Scaffold(
+      backgroundColor: kWhiteColor,
+      body: SafeArea(
+        child: Stack(
+          children: [
+            /// Top Background Shape
+            Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: Image.asset(authScreenShape, fit: BoxFit.cover),
+            ),
+
+            /// Content
+            SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: 60),
+
+                    /// Logo & Title
+                    LogoWithTitle(),
+                    const SizedBox(height: 100),
+
+                    // Title
+                    const Text(
+                      "إنشاء حساب جديد",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF1E3A5F),
+                      ),
+                    ),
+                    const SizedBox(height: 40),
+
+                    /// Full Name
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "الاسم الكامل",
+                        style: TextStyle(fontSize: 14, color: kBlackColor),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    CustomTextField(
+                      hint: "ادخل الاسم رباعي",
+                      prefixSvg: "assets/icons/user.svg",
+                      controller: provider.nameController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "الاسم مطلوب";
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 20),
+
+                    /// Phone
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "رقم الهاتف",
+                        style: TextStyle(fontSize: 14, color: kBlackColor),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    CustomTextField(
+                      hint: "+970",
+                      prefixSvg: "assets/icons/phone.svg",
+                      keyboardType: TextInputType.phone,
+                      controller: provider.phoneController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "الرقم مطلوب";
+                        }
+                        if (!value.startsWith("+970") &&
+                            !value.startsWith("+972")) {
+                          return "يجب أن يبدأ الرقم بـ +970 أو +972";
+                        }
+                        if (value.startsWith("+970") && value.length != 13) {
+                          return "رقم الهاتف غير صحيح (+970xxxxxxxx)";
+                        }
+                        if (value.startsWith("+972") && value.length != 13) {
+                          return "رقم الهاتف غير صحيح (+972xxxxxxxx)";
+                        }
+                        final digits = value.substring(1);
+                        if (!RegExp(r'^\d+$').hasMatch(digits)) {
+                          return "رقم الهاتف يحتوي على رموز غير صحيحة";
+                        }
+                        return null; // صح
+                      },
+                    ),
+                    const SizedBox(height: 20),
+
+                    /// PIN
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "رمز PIN",
+                        style: TextStyle(fontSize: 14, color: kBlackColor),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    CustomTextField(
+                      hint: "ادخل 4-6 أرقام",
+                      prefixSvg: "assets/icons/lock.svg",
+                      obscureText: true,
+                      keyboardType: TextInputType.number,
+                      controller: provider.pinController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "الرقم السري مطلوب";
+                        }
+                        if (value.length < 6) {
+                          return "الرقم السري يجب أن يكون 6 أحرف على الأقل";
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 20),
+
+                    /// Confirm PIN
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "تأكيد رمز PIN",
+                        style: TextStyle(fontSize: 14, color: kBlackColor),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    CustomTextField(
+                      hint: "أعد ادخال الرمز",
+                      prefixSvg: "assets/icons/lock.svg",
+                      obscureText: true,
+                      keyboardType: TextInputType.number,
+                      controller: provider.confirmPinController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "تأكيد رمز PIN مطلوب";
+                        }
+                        if (value != provider.pinController.text) {
+                          return "الرمز غير متطابق";
+                        }
+                        return null;
+                      },
+                    ),
+
+                    const SizedBox(height: 40),
+
+                    /// Register Button
+                    Consumer<RegisterProvider>(
+                      builder: (_, registerProv, _) {
+                        if (registerProv.registerResponse?.status ==
+                            Status.LOADING) {
+                          return const CircularProgressIndicator();
+                        }
+                        if (registerProv.registerResponse?.status ==
+                            Status.ERROR) {
+                          print(
+                            "Error: ${registerProv.registerResponse?.message}",
+                          );
+                          WidgetsBinding.instance.addPostFrameCallback((_) {
+                            if (registerProv.registerResponse?.message !=
+                                    null &&
+                                registerProv
+                                    .registerResponse!
+                                    .message!
+                                    .isNotEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    registerProv.registerResponse!.message!,
+                                    style: TextStyle(color: kWhiteColor),
+                                  ),
+                                  backgroundColor: kPrimaryColor,
+                                ),
+                              );
+                            }
+                          });
+                        }
+                        if (provider.registerResponse?.status ==
+                            Status.COMPLETED) {
+                          WidgetsBinding.instance.addPostFrameCallback((_) {
+                            Navigator.pushReplacementNamed(
+                              context,
+                              HomeScreen.id,
+                            );
+                          });
+                        }
+                        return PrimaryButton(
+                          onPressed: () {
+                            if (_formKey.currentState!.validate()) {
+                              provider.register();
+                            }
+                          },
+                          title: "متابعة",
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 20),
+
+                    /// Login Text
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "لديك حساب بالفعل ؟ ",
+                          style: TextStyle(fontSize: 14, color: kGreyColor),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacementNamed(
+                              context,
+                              LoginScreen.id,
+                            );
+                          },
+                          child: const Text(
+                            "تسجيل دخول",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: kPrimaryColor,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 30),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\View\Auth\Forgot Pin Steps\step_create_pin.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Helper/api_response.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/Provider/forgot_pin_provider.dart';
+import 'package:gazapay/Widgets/success_dialog.dart';
+import 'package:provider/provider.dart';
+import '../../../widgets/custom_text_filed.dart';
+import '../../../widgets/primary_button.dart';
+
+class StepCreatePin extends StatelessWidget {
+  final VoidCallback onNext;
+
+  const StepCreatePin({super.key, required this.onNext});
+
+  @override
+  Widget build(BuildContext context) {
+    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+    final provider = context.watch<ForgotPinProvider>();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "إنشاء رمز جديد",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              "أدخل رمز PIN الجديد",
+              style: TextStyle(fontSize: 14, color: kGreyColor),
+            ),
+
+            const SizedBox(height: 30),
+
+            const Align(
+              alignment: Alignment.centerRight,
+              child: Text("رمز PIN الجديد"),
+            ),
+            const SizedBox(height: 8),
+
+            CustomTextField(
+              hint: "ادخل الرمز 6 أرقام",
+              keyboardType: TextInputType.number,
+              obscureText: true,
+              prefixSvg: "assets/icons/lock.svg",
+              controller: provider.newPinController,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return "الرقم السري مطلوب";
+                }
+                if (value.length < 6) {
+                  return "الرقم السري يجب أن يكون 6 أحرف على الأقل";
+                }
+                return null;
+              },
+            ),
+
+            const SizedBox(height: 20),
+
+            const Align(
+              alignment: Alignment.centerRight,
+              child: Text("تأكيد رمز PIN الجديد"),
+            ),
+            const SizedBox(height: 8),
+
+            CustomTextField(
+              hint: "أعد ادخال الرمز",
+              keyboardType: TextInputType.number,
+              obscureText: true,
+              prefixSvg: "assets/icons/lock.svg",
+              controller: provider.confirmPinController,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return "تأكيد رمز PIN مطلوب";
+                }
+                if (value != provider.newPinController.text) {
+                  return "الرمز غير متطابق";
+                }
+                return null;
+              },
+            ),
+
+            const SizedBox(height: 30),
+
+            Consumer<ForgotPinProvider>(
+              builder: (_, value, _) {
+                if (value.changePinResponse?.status == Status.LOADING) {
+                  return const CircularProgressIndicator();
+                }
+                if (value.changePinResponse?.status == Status.ERROR) {
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          value.changePinResponse?.message ??
+                              "حدث خطأ غير معروف",
+                        ),
+                        backgroundColor: Colors.red,
+                      ),
+                    );
+                  });
+                }
+                if (provider.changePinResponse?.status == Status.COMPLETED) {
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      barrierColor: kWhiteColor.withOpacity(0.8),
+                      builder: (_) => const SuccessDialog(),
+                    );
+                  });
+                }
+                return PrimaryButton(
+                  title: "تغيير الرمز",
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      provider.changePin();
+                    }
+                  },
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\View\Auth\Forgot Pin Steps\step_enter_phone.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Helper/api_response.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/Provider/forgot_pin_provider.dart';
+import 'package:provider/provider.dart';
+import '../../../widgets/primary_button.dart';
+import '../../../widgets/custom_text_filed.dart';
+
+class StepEnterPhone extends StatelessWidget {
+  final VoidCallback onNext;
+
+  const StepEnterPhone({super.key, required this.onNext});
+
+  @override
+  Widget build(BuildContext context) {
+    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+    final provider = context.watch<ForgotPinProvider>();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "نسيت رمز PIN ؟",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              "ادخل رقم هاتفك لاعادة تعيين الرمز",
+              style: TextStyle(fontSize: 14, color: kGreyColor),
+            ),
+            const SizedBox(height: 30),
+
+            const Align(
+              alignment: Alignment.centerRight,
+              child: Text("رقم الهاتف"),
+            ),
+            const SizedBox(height: 8),
+
+            CustomTextField(
+              hint: "+970",
+              keyboardType: TextInputType.phone,
+              prefixSvg: "assets/icons/phone.svg",
+              controller: provider.phoneController,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return "الرقم مطلوب";
+                }
+                if (!value.startsWith("+970") && !value.startsWith("+972")) {
+                  return "يجب أن يبدأ الرقم بـ +970 أو +972";
+                }
+                if (value.startsWith("+970") && value.length != 13) {
+                  return "رقم الهاتف غير صحيح (+970xxxxxxxx)";
+                }
+                if (value.startsWith("+972") && value.length != 13) {
+                  return "رقم الهاتف غير صحيح (+972xxxxxxxx)";
+                }
+                final digits = value.substring(1);
+                if (!RegExp(r'^\d+$').hasMatch(digits)) {
+                  return "رقم الهاتف يحتوي على رموز غير صحيحة";
+                }
+                return null; // صح
+              },
+            ),
+
+            const SizedBox(height: 30),
+
+            Consumer<ForgotPinProvider>(
+              builder: (_, forgotPinProv, _) {
+                if (forgotPinProv.resetPinResponse?.status == Status.LOADING) {
+                  return const CircularProgressIndicator();
+                }
+                if (forgotPinProv.resetPinResponse?.status ==
+                    Status.COMPLETED) {
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text("تم إرسال رمز التحقق إلى هاتفك"),
+                        backgroundColor: kPrimaryColor,
+                      ),
+                    );
+                    onNext();
+                  });
+                }
+                if (forgotPinProv.resetPinResponse?.status == Status.ERROR) {
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          forgotPinProv.resetPinResponse?.message ?? "حدث خطأ",
+                        ),
+                        backgroundColor: Colors.red,
+                      ),
+                    );
+                  });
+                }
+                return PrimaryButton(
+                  title: "إرسال رمز التحقق",
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      forgotPinProv.resetPin();
+                    }
+                  },
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\View\Auth\Forgot Pin Steps\step_verify_code.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Helper/api_response.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/Provider/forgot_pin_provider.dart';
+import 'package:gazapay/Widgets/otp_field.dart';
+import 'package:provider/provider.dart';
+import '../../../widgets/primary_button.dart';
+
+class StepVerifyCode extends StatelessWidget {
+  final VoidCallback onNext;
+
+  const StepVerifyCode({super.key, required this.onNext});
+
+  @override
+  Widget build(BuildContext context) {
+    final provider = context.watch<ForgotPinProvider>();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          /// Title
+          const Text(
+            "التحقق من الرقم",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            textAlign: TextAlign.center,
+          ),
+
+          const SizedBox(height: 8),
+
+          /// Subtitle
+          Text(
+            "تم إرسال رمز التحقق إلى ${provider.phoneController.text.replaceRange(4, 10, "****")}",
+            style: TextStyle(fontSize: 14, color: Color(0xFF8E8E93)),
+            textAlign: TextAlign.center,
+          ),
+
+          const SizedBox(height: 40),
+
+          /// OTP
+          OtpField(
+            onCompleted: (code) {
+              context.read<ForgotPinProvider>().codeController.text = code;
+            },
+          ),
+          const SizedBox(height: 20),
+
+          /// Timer
+          const Text(
+            "انتهاء صلاحية الرمز بعد 3:00",
+            style: TextStyle(
+              fontSize: 13,
+              color: kPrimaryColor,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const SizedBox(height: 20),
+
+          /// Verify Button
+          Consumer<ForgotPinProvider>(
+            builder: (_, prov, __) {
+              if (prov.verifyCodeResponse?.status == Status.LOADING) {
+                return const CircularProgressIndicator();
+              }
+
+              if (prov.verifyCodeResponse?.status == Status.COMPLETED) {
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  onNext();
+                });
+              }
+
+              if (prov.verifyCodeResponse?.status == Status.ERROR) {
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        prov.verifyCodeResponse?.message ?? "الكود غير صحيح",
+                      ),
+                      backgroundColor: Colors.red,
+                    ),
+                  );
+                });
+              }
+
+              return PrimaryButton(
+                title: "تحقق",
+                onPressed: () {
+                  prov.verifyCode();
+                },
+              );
+            },
+          ),
+
+          const SizedBox(height: 16),
+
+          /// Resend
+          GestureDetector(
+            onTap: () {},
+            child: const Text(
+              "إعادة إرسال الرمز",
+              style: TextStyle(
+                fontSize: 14,
+                color: Color(0xFF1E3A5F),
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+          const SizedBox(height: 30),
+        ],
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\View\Home\home_screen.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/View/Auth/register_screen.dart';
+
+class HomeScreen extends StatelessWidget {
+  static String id = "homeScreen";
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("الرئيسية"),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, RegisterScreen.id);
+            },
+          ),
+        ],
+      ),
+      body: Center(
+        child: Text(
+          "مرحبا بك في غزة باي",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\Widgets\custom_text_filed.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+
+class CustomTextField extends StatelessWidget {
+  final String hint;
+
+  /// Core
+  final TextEditingController? controller;
+  final FocusNode? focusNode;
+  final bool obscureText;
+  final TextInputType keyboardType;
+
+  /// Validation
+  final String? Function(String?)? validator;
+  final void Function(String)? onChanged;
+  final void Function(String)? onFieldSubmitted;
+
+  /// Icons
+  final String? prefixSvg;
+  final String? suffixSvg;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
+
+  const CustomTextField({
+    super.key,
+    required this.hint,
+    this.controller,
+    this.focusNode,
+    this.obscureText = false,
+    this.keyboardType = TextInputType.text,
+    this.validator,
+    this.onChanged,
+    this.onFieldSubmitted,
+    this.prefixSvg,
+    this.suffixSvg,
+    this.prefixIcon,
+    this.suffixIcon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: controller,
+      focusNode: focusNode,
+      obscureText: obscureText,
+      keyboardType: keyboardType,
+      textAlign: TextAlign.start,
+      validator: validator,
+      onChanged: onChanged,
+      onFieldSubmitted: onFieldSubmitted,
+      decoration: InputDecoration(
+        hintText: hint,
+        hintStyle: const TextStyle(color: kGreyColor),
+        filled: true,
+        fillColor: Colors.white,
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: 18,
+          horizontal: 16,
+        ),
+
+        /// Borders
+        border: _border(kHintColor),
+        enabledBorder: _border(kHintColor),
+        focusedBorder: _border(kPrimaryColor, width: 1.2),
+        errorBorder: _border(Colors.red),
+        focusedErrorBorder: _border(Colors.red, width: 1.2),
+
+        /// Prefix
+        prefixIcon: prefixIcon ??
+            (prefixSvg != null
+                ? _buildSvg(prefixSvg!)
+                : null),
+
+        /// Suffix
+        suffixIcon: suffixIcon ??
+            (suffixSvg != null
+                ? _buildSvg(suffixSvg!)
+                : null),
+      ),
+    );
+  }
+
+  Widget _buildSvg(String path) {
+    return Padding(
+      padding: const EdgeInsets.all(14),
+      child: SvgPicture.asset(
+        path,
+        height: 20,
+        width: 20,
+        colorFilter:
+            const ColorFilter.mode(kGreyColor, BlendMode.srcIn),
+      ),
+    );
+  }
+
+  OutlineInputBorder _border(Color color, {double width = 1}) {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(14),
+      borderSide: BorderSide(color: color, width: width),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\Widgets\forgot_pin_header.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+
+class ForgotPinHeader extends StatelessWidget {
+  const ForgotPinHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back, size: 24, color: kGreyColor),
+          ),
+          const Text(
+            "استرجاع رمز PIN",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+              color: kPrimaryColor,
+            ),
+          ),
+          const SizedBox(width: 50),
+        ],
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\Widgets\logo_with_title.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+
+class LogoWithTitle extends StatelessWidget {
+  const LogoWithTitle({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        const Text(
+          "GAZA PAY",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+            color: kPrimaryColor,
+            letterSpacing: 1,
+          ),
+        ),
+        const SizedBox(width: 12),
+        Container(
+          height: 42,
+          width: 42,
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: kPrimaryColor,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: SvgPicture.asset(
+            'assets/icons/appIcon.svg',
+            color: kWhiteColor,
+          ),
+        ),
+      ],
+    );
+  }
+}
+===== D:\Android\gazapay\lib\Widgets\otp_field.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+
+class OtpField extends StatefulWidget {
+  final Function(String) onCompleted;
+
+  const OtpField({super.key, required this.onCompleted});
+
+  @override
+  State<OtpField> createState() => _OtpFieldState();
+}
+
+class _OtpFieldState extends State<OtpField> {
+  final List<TextEditingController> controllers = List.generate(
+    6,
+    (_) => TextEditingController(),
+  );
+
+  final List<FocusNode> focusNodes = List.generate(6, (_) => FocusNode());
+
+  void onChanged(String value, int index) {
+    if (value.isNotEmpty && index < 5) {
+      focusNodes[index + 1].requestFocus();
+    }
+
+    if (value.isEmpty && index > 0) {
+      focusNodes[index - 1].requestFocus();
+    }
+
+    /// جمع الكود
+    String code = controllers.map((e) => e.text).join();
+
+    if (code.length == 6) {
+      widget.onCompleted(code);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: List.generate(
+        6,
+        (index) => SizedBox(
+          width: 50,
+          height: 50,
+          child: TextField(
+            controller: controllers[index],
+            focusNode: focusNodes[index],
+            keyboardType: TextInputType.number,
+            maxLength: 1,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            decoration: InputDecoration(
+              counterText: "",
+              filled: true,
+              fillColor: kWhiteColor,
+              contentPadding: EdgeInsets.zero,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(14),
+                borderSide: const BorderSide(color: kHintColor),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(14),
+                borderSide: const BorderSide(color: kHintColor),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(14),
+                borderSide: const BorderSide(color: kPrimaryColor, width: 1.5),
+              ),
+            ),
+            onChanged: (value) => onChanged(value, index),
+          ),
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\Widgets\primary_button.dart =====
+import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+
+class PrimaryButton extends StatelessWidget {
+  final VoidCallback? onPressed;
+  final String? title;
+  final Widget? child;
+  final bool isLoading;
+  final bool isEnabled;
+  final double height;
+  final double borderRadius;
+  final Color? backgroundColor;
+  final Color? textColor;
+
+  const PrimaryButton({
+    super.key,
+    required this.onPressed,
+    this.title,
+    this.child,
+    this.isLoading = false,
+    this.isEnabled = true,
+    this.height = 55,
+    this.borderRadius = 14,
+    this.backgroundColor,
+    this.textColor = kWhiteColor,
+  }) : assert(
+         title != null || child != null,
+         "You must provide either title or child",
+       );
+
+  @override
+  Widget build(BuildContext context) {
+    final bool disabled = !isEnabled || isLoading;
+
+    return SizedBox(
+      width: double.infinity,
+      height: height,
+      child: ElevatedButton(
+        onPressed: disabled ? null : onPressed,
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          backgroundColor: backgroundColor ?? kPrimaryColor,
+          disabledBackgroundColor: (backgroundColor ?? kPrimaryColor)
+              .withOpacity(0.5),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius),
+          ),
+        ),
+        child: isLoading
+            ? const SizedBox(
+                height: 22,
+                width: 22,
+                child: CircularProgressIndicator(
+                  strokeWidth: 2.5,
+                  valueColor: AlwaysStoppedAnimation<Color>(kWhiteColor),
+                ),
+              )
+            : child ??
+                  Text(
+                    title!,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: textColor,
+                    ),
+                  ),
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\lib\Widgets\success_dialog.dart =====
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/View/Auth/login_screen.dart';
+import '../../../widgets/primary_button.dart';
+
+class SuccessDialog extends StatelessWidget {
+  const SuccessDialog({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      backgroundColor: kWhiteColor,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Container(
+        padding: const EdgeInsets.all(24),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.15),
+              blurRadius: 25,
+              spreadRadius: 2,
+              offset: const Offset(0, 10),
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SvgPicture.asset("assets/icons/success.svg", width: 60, height: 60),
+            const SizedBox(height: 16),
+            const Text(
+              "تم تغيير الرمز بنجاح",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: kPrimaryColor,
+              ),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              "يمكنك الآن تسجيل الدخول بالرمز الجديد",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: kBlackColor),
+            ),
+
+            const SizedBox(height: 24),
+            PrimaryButton(
+              title: "تسجيل الدخول",
+              onPressed: () {
+                Navigator.of(
+                  context,
+                ).pushNamedAndRemoveUntil(LoginScreen.id, (route) => false);
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\gazapay\macos\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json =====
+{
+  "images" : [
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "app_icon_16.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "app_icon_32.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "app_icon_32.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "app_icon_64.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "app_icon_128.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "app_icon_256.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "app_icon_256.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "app_icon_512.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "app_icon_512.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "app_icon_1024.png",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+===== D:\Android\gazapay\test\widget_test.dart =====
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+import 'package:gazapay/main.dart';
+
+void main() {
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyApp());
+
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
+
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
+
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
+  });
+}
+===== D:\Android\gazapay\web\manifest.json =====
+{
+    "name": "gazapay",
+    "short_name": "gazapay",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A new Flutter project.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
