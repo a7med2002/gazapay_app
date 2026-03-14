@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:gazapay/Core/Util/constants.dart';
 
 class OtpField extends StatefulWidget {
-  const OtpField({super.key});
+  final Function(String) onCompleted;
+
+  const OtpField({super.key, required this.onCompleted});
 
   @override
   State<OtpField> createState() => _OtpFieldState();
@@ -10,18 +12,26 @@ class OtpField extends StatefulWidget {
 
 class _OtpFieldState extends State<OtpField> {
   final List<TextEditingController> controllers = List.generate(
-    4,
+    6,
     (_) => TextEditingController(),
   );
 
-  final List<FocusNode> focusNodes = List.generate(4, (_) => FocusNode());
+  final List<FocusNode> focusNodes = List.generate(6, (_) => FocusNode());
 
   void onChanged(String value, int index) {
-    if (value.isNotEmpty && index < 3) {
+    if (value.isNotEmpty && index < 5) {
       focusNodes[index + 1].requestFocus();
     }
+
     if (value.isEmpty && index > 0) {
       focusNodes[index - 1].requestFocus();
+    }
+
+    /// جمع الكود
+    String code = controllers.map((e) => e.text).join();
+
+    if (code.length == 6) {
+      widget.onCompleted(code);
     }
   }
 
@@ -30,10 +40,10 @@ class _OtpFieldState extends State<OtpField> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(
-        4,
+        6,
         (index) => SizedBox(
-          width: 80,
-          height: 60,
+          width: 50,
+          height: 50,
           child: TextField(
             controller: controllers[index],
             focusNode: focusNodes[index],
@@ -56,10 +66,7 @@ class _OtpFieldState extends State<OtpField> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(14),
-                borderSide: const BorderSide(
-                  color: kPrimaryColor, // primary
-                  width: 1.5,
-                ),
+                borderSide: const BorderSide(color: kPrimaryColor, width: 1.5),
               ),
             ),
             onChanged: (value) => onChanged(value, index),

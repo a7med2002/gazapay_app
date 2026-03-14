@@ -33,7 +33,6 @@ class _ForgotPinScreenState extends State<ForgotPinScreen> {
           children: [
             const SizedBox(height: 40),
             const ForgotPinHeader(),
-
             Expanded(
               child: PageView(
                 controller: _controller,

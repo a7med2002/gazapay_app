@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gazapay/Core/Helper/api_response.dart';
 import 'package:gazapay/Core/Util/constants.dart';
+import 'package:gazapay/Provider/forgot_pin_provider.dart';
 import 'package:gazapay/Widgets/otp_field.dart';
+import 'package:provider/provider.dart';
 import '../../../widgets/primary_button.dart';
 
 class StepVerifyCode extends StatelessWidget {
@@ -10,6 +13,7 @@ class StepVerifyCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = context.watch<ForgotPinProvider>();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
@@ -25,8 +29,8 @@ class StepVerifyCode extends StatelessWidget {
           const SizedBox(height: 8),
 
           /// Subtitle
-          const Text(
-            "تم إرسال رمز التحقق إلى +970",
+          Text(
+            "تم إرسال رمز التحقق إلى ${provider.phoneController.text.replaceRange(4, 10, "****")}",
             style: TextStyle(fontSize: 14, color: Color(0xFF8E8E93)),
             textAlign: TextAlign.center,
           ),
@@ -34,7 +38,11 @@ class StepVerifyCode extends StatelessWidget {
           const SizedBox(height: 40),
 
           /// OTP
-          const OtpField(),
+          OtpField(
+            onCompleted: (code) {
+              context.read<ForgotPinProvider>().codeController.text = code;
+            },
+          ),
           const SizedBox(height: 20),
 
           /// Timer
@@ -49,7 +57,39 @@ class StepVerifyCode extends StatelessWidget {
           const SizedBox(height: 20),
 
           /// Verify Button
-          PrimaryButton(title: "تحقق", onPressed: onNext),
+          Consumer<ForgotPinProvider>(
+            builder: (_, prov, __) {
+              if (prov.verifyCodeResponse?.status == Status.LOADING) {
+                return const CircularProgressIndicator();
+              }
+
+              if (prov.verifyCodeResponse?.status == Status.COMPLETED) {
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  onNext();
+                });
+              }
+
+              if (prov.verifyCodeResponse?.status == Status.ERROR) {
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        prov.verifyCodeResponse?.message ?? "الكود غير صحيح",
+                      ),
+                      backgroundColor: Colors.red,
+                    ),
+                  );
+                });
+              }
+
+              return PrimaryButton(
+                title: "تحقق",
+                onPressed: () {
+                  prov.verifyCode();
+                },
+              );
+            },
+          ),
 
           const SizedBox(height: 16),
 
